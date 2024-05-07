@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Website</title>
+    <style>
+        /* CSS untuk menengahkan teks */
+        body, html {
+            background-color: #EEF5FF;;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* CSS untuk animasi fade out */
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        .fade-out {
+            animation: fadeOut 2s ease; /* Mengubah durasi animasi menjadi 2 detik */
+        }
+
+        /* CSS untuk mengatur font teks */
+        h1 {
+            font-family: Arial, sans-serif ;
+            font-size: 4em;
+            color: #176B87;
+            line-height: 1.3;
+        }
+
+        /* CSS untuk menyembunyikan video secara awal */
+        #videoContainer, #secondVideoContainer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Teks pertama di tengah halaman -->
+    <div id="mainText">
+        <h1>Belajar Berjalan Sendiri</h1>
+    </div>
+
+    <!-- Video pertama yang awalnya disembunyikan -->
+    <div id="videoContainer">
+        <video id="tutorialVideo" controls autoplay onended="fadeOutVideo()" width="1300" height="750">
+            <source src="Berjalan Belajar.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Teks kedua -->
+    <div id="secondText" style="display: none;">
+        <h1>Belajar Tepuk dan Melambaikan Tangan</h1>
+    </div>
+
+    <!-- Video kedua yang awalnya disembunyikan -->
+    <div id="secondVideoContainer" style="display: none;">
+        <video id="secondVideo" controls width="1300" height="750">
+            <source src="Tepuk Tangan.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        // Function untuk memudar video pertama saat selesai diputar
+        function fadeOutVideo() {
+            var videoContainer = document.getElementById("videoContainer");
+            videoContainer.classList.add("fade-out");
+            setTimeout(function() {
+                videoContainer.style.display = "none"; // Sembunyikan video pertama
+                // Tampilkan teks kedua
+                var secondText = document.getElementById("secondText");
+                secondText.style.display = "block";
+                setTimeout(function() {
+                    // Setelah 2 detik, panggil fungsi untuk memudar teks kedua dan menampilkan video kedua
+                    fadeOutSecondText();
+                }, 2000); // 2000 milidetik = 2 detik setelah teks kedua muncul
+            }, 2000); // 2000 milidetik = 2 detik setelah video pertama memudar
+        }
+
+        // Function untuk memudar teks kedua saat selesai diputar
+        function fadeOutSecondText() {
+            var secondText = document.getElementById("secondText");
+            secondText.classList.add("fade-out");
+            setTimeout(function() {
+                secondText.style.display = "none"; // Sembunyikan teks kedua
+                startSecondVideo(); // Panggil fungsi untuk memulai video kedua
+            }, 2000); // 2000 milidetik = 2 detik setelah teks kedua memudar
+        }
+
+        // Function untuk memulai pemutaran otomatis video kedua setelah teks kedua memudar
+        function startSecondVideo() {
+            // Tampilkan video kedua
+            var secondVideoContainer = document.getElementById("secondVideoContainer");
+            secondVideoContainer.style.display = "block";
+            // Putar video kedua
+            document.getElementById("secondVideo").play();
+        }
+
+        // Script untuk menghilangkan teks pertama dan menampilkan video pertama setelahnya
+        document.addEventListener("DOMContentLoaded", function() {
+            var mainText = document.getElementById("mainText");
+            var videoContainer = document.getElementById("videoContainer");
+
+            setTimeout(function() {
+                mainText.classList.add("fade-out");
+                setTimeout(function() {
+                    mainText.style.display = "none"; // Sembunyikan teks pertama
+                    videoContainer.style.display = "block"; // Tampilkan video pertama
+                }, 2000); // 2000 milidetik = 2 detik setelah teks pertama menghilang
+            }, 2000); // 2000 milidetik = 2 detik setelah halaman dimuat
+        });
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Usia Anak</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #FFD0D0; /* Mengubah warna latar belakang */
+            background-image: url('data:image/svg+xml,%3Csvg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23F8BBC5" fill-opacity="0.5"%3E%3Cpath d="M30 15c0-2.843-2.186-5.5-5.5-5.5S19 12.157 19 15s2.186 5.5 5.5 5.5S30 17.843 30 15zm-10.5 0c0-2.843-2.186-5.5-5.5-5.5S3 12.157 3 15s2.186 5.5 5.5 5.5S19 17.843 19 15zm-10.5 0c0-2.843-2.186-5.5-5.5-5.5S3 12.157 3 15s2.186 5.5 5.5 5.5S8.5 17.843 8.5 15zM0 15c0-2.843 2.186-5.5 5.5-5.5S11 12.157 11 15s-2.186 5.5-5.5 5.5S0 17.843 0 15zm20.895 3.404C21.445 18.356 21.001 17.728 20 17c-1-1-2-1.732-2.85-2.015C17.149 14.947 16.65 14.5 16 14.5c-.65 0-1.149.447-1.15.485C14 15.268 13 16 12 17c-1 1-1.445 1.629-1.896 1.904-.001.002-.128.081-.228.281-.101.201-.172.484 0 .781.164.266.521.615 1.124 1.006.603.39 1.393.893 2.504 1.522 1.11.628 2.506 1.005 4.09 1.13 1.584.124 3.36-.103 4.99-.73 1.629-.628 2.782-1.432 3.682-2.376.9-.943 1.394-2.05 1.394-3.32 0-1.27-.495-2.378-1.395-3.32-.9-.943-2.053-1.747-3.682-2.375zm-.894 3.804c-.497.522-1.207.959-2.101 1.311-1.336.614-2.856.908-4.572.782-1.715-.125-3.603-.564-5.272-1.2-.982-.358-1.752-.753-2.327-1.16-.068-.034-.109-.055-.117-.061l-.006-.005c.067-.045.169-.094.309-.159.141-.067.301-.139.482-.222.308-.16.664-.342 1.064-.543.9-.412 1.986-.925 3.143-1.503 1.158-.577 2.42-1.232 3.765-1.974 1.346-.741 2.769-1.641 4.171-2.693 1.401-1.052 2.774-2.246 4.103-3.58.001 0 .039-.034.112-.101.72-.524 1.606-1.182 2.623-1.974 1.016-.79 2.121-1.696 3.31-2.714.15-.141.277-.251.387-.341l.006-.005c-.008.006-.05.031-.117.075-.57.407-1.348.907-2.33 1.49-1.67.638-3.557 1.078-5.272 1.202-1.715.125-3.236-.167-4.572-.781-.895-.352-1.604-.789-2.101-1.311-.448-.472-.682-.964-.682-1.476s.234-1.004.682-1.476c.497-.522 1.206-.959 2.101-1.31 1.336-.615 2.856-.909 4.572-.782 1.716.125 3.603.563 5.272 1.199.982.357 1.752.753 2.327 1.159.069.034.109.055.117.061l.006.005c-.067.045-.169.094-.309.16-.141.067-.301.139-.482.221-.308.16-.664.342-1.064.543-.9.412-1.986.926-3.143 1.504-1.157.577-2.419 1.232-3.764 1.974-1.347.741-2.77 1.642-4.172 2.693-1.401 1.052-2.774 2.246-4.103 3.58-.001 0-.039.033-.112.1-.72.524-1.606 1.182-2.623 1.974-1.016.789-2.121 1.696-3.31 2.714-.15.141-.277.252-.387.342l-.006.005c.008-.006.05-.031.117-.075.57-.407 1.348-.907 2.33-1.49 1.67-.638 3.557-1.078 5.272-1.202 1.715-.125 3.236.167 4.572.781.895.352 1.604.789 2.101 1.31.448.472.682.964.682 1.476s-.234 1.004-.682 1.476z%22/%3E%3C/g%3E%3C/svg%3E');
+            background-size: 30px;
+        }
+
+        h1 {
+            font-size: 100px;
+            margin-bottom: 20px; /* Menambahkan margin bawah pada judul */
+            margin-top: 100px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #C65D7B; /* Mengubah warna judul menjadi pink */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px; /* Menurunkan posisi container */
+        }
+
+        .option {
+            width: 350px; /* Memperbesar lebar kotak */
+            height: 450px; /* Memperbesar tinggi kotak */
+            background-color: #FFEAE3; /* Mengubah latar belakang kotak menjadi putih */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 40px; /* Memperbesar ukuran font */
+            margin-bottom: 20px; /* Menambahkan margin bawah pada kotak */
+            margin-top: 30px; /* Menurunkan posisi kotak */
+            color: #C65D7B; /* Mengubah warna teks di dalam kotak menjadi #A87676 */
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial
+        }
+
+        /* Kartun mainan anak perempuan */
+        .toy-cartoon {
+            position: absolute;
+            max-width: 150px; /* Sesuaikan ukuran kartun */
+            z-index: -1; /* Taruh di belakang */
+        }
+
+        /* Penyesuaian untuk kartun pertama */
+        .toy1-cartoon {
+            top: 10%;
+            left: 5%;
+        }
+
+        /* Penyesuaian untuk kartun kedua */
+        .toy2-cartoon {
+            top: 30%;
+            right: 5%;
+        }
+
+        /* Penyesuaian untuk kartun ketiga */
+        .toy3-cartoon {
+            bottom: 10%;
+            left: 10%;
+        }
+
+        /* Penyesuaian untuk kartun keempat */
+        .toy4-cartoon {
+            bottom: 20%;
+            right: 10%;
+        }
+
+        /* Efek hover pada option */
+        .option:hover {
+            transform: scale(1.05); /* Memperbesar sedikit saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Pilih Usia Anak</h1>
+    <div class="container">
+        <a href="Perkembangan 12-18.html" class="option">12-18 Bulan</a>
+        <a href="Perkembangan 19-24.html" class="option">19-24 Bulan</a>
+        <a href="Perkembangan 24-36.html" class="option">24-36 Bulan</a>
+    </div>
+
+    <!-- Kartun mainan anak perempuan -->
+    <img src="kartun 1.png" alt="Toy Cartoon" class="toy-cartoon toy1-cartoon">
+    <img src="Kartun 2.png" alt="Toy Cartoon" class="toy-cartoon toy2-cartoon">
+</body>
+</html>
+
+
+
+
+
+
